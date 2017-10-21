@@ -33,6 +33,8 @@ public String SubtractHour(String ora){
         return ore + " " + minute;
     }
 
+public void checkOnlineState() { ConnectivityManager CManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE); NetworkInfo NInfo = CManager.getActiveNetworkInfo(); if (NInfo != null && NInfo.isConnectedOrConnecting()) { if (InetAddress.getByName("www.xy.com").isReachable(timeout)) { // host reachable } else { // host not reachable } } return; }
+
 Public void BitmapToInputStreaam(){
     ByteArrayOutputStream bos = new ByteArrayOutputStream(); 
     bitmap.compress(CompressFormat.PNG, 0 /*ignored for PNG*/, bos); 
