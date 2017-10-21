@@ -32,3 +32,15 @@ public String SubtractHour(String ora){
     
         return ore + " " + minute;
     }
+
+Public void inputStreamToBitmap(){
+ByteArrayOutputStream bos = new ByteArrayOutputStream(); 
+
+bitmap.compress(CompressFormat.PNG, 0 /*ignored for PNG*/, bos); 
+
+byte[] bitmapdata = bos.toByteArray();
+
+ByteArrayInputStream bs = new ByteArrayInputStream
+
+
+}
