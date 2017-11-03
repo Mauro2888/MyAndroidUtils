@@ -52,3 +52,10 @@ Public void BitmapToInputStreaam(){
         startActivity(intent);
         overridePendingTransition(0, 0);
     }
+    
+     public static int calculateNoOfColumns(Context context) {
+        DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
+        float dpWidth = displayMetrics.widthPixels / displayMetrics.density;
+        int noOfColumns = (int) (dpWidth / 180);
+        return noOfColumns >= 2 ? noOfColumns : 2;
+    }
