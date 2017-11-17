@@ -59,3 +59,15 @@ Public void BitmapToInputStreaam(){
         int noOfColumns = (int) (dpWidth / 180);
         return noOfColumns >= 2 ? noOfColumns : 2;
     }
+private BroadcastReceiver networkReceiver = new BroadcastReceiver() {
+    @Override
+    public void onReceive(Context context, Intent intent) {
+        if (intent.getAction().equals(ConnectivityManager.CONNECTIVITY_ACTION)) {
+            NetworkInfo networkInfo = intent.getParcelableExtra(ConnectivityManager.EXTRA_NETWORK_INFO);
+            if (networkInfo != null && networkInfo.getDetailedState() == NetworkInfo.DetailedState.CONNECTED) {
+                Log.d(LOG_TAG, "We have internet connection. Good to go.");
+            } else if (networkInfo != null && networkInfo.getDetailedState() == NetworkInfo.DetailedState.DISCONNECTED) {
+                Log.d(LOG_TAG, "We have lost internet connection");
+            }
+        }
+    }
