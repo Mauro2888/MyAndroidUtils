@@ -70,4 +70,5 @@ private BroadcastReceiver networkReceiver = new BroadcastReceiver() {
                 Log.d(LOG_TAG, "We have lost internet connection");
             }
         }
+        //REMEMBER TO REGISTER AND UNREGISTER ON RESUME ON PAUSE
     }
