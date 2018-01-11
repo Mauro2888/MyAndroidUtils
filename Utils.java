@@ -3,6 +3,19 @@ public boolean permResutl(Context context, String[] arrayPerm){
     return req == PackageManager.PERMISSION_GRANTED;
 }
 
+
+//POST
+
+/*
+
+        urlConnection.setDoOutput(true);
+        DataOutputStream outputStream = new DataOutputStream(urlConnection.getOutputStream());
+        outputStream.writeBytes(post);
+        outputStream.flush();
+        outputStream.close();
+*/
+
+
 public void getBytesFromFile(InputStream input, OutputStream output) throws IOException {
     byte[] bufferDati = new byte[1024];
     int readData;
