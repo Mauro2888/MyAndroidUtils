@@ -6,6 +6,18 @@ public boolean permResutl(Context context, String[] arrayPerm){
 
 //POST
 
+//create a json object with values and insert inside to writeBytes
+/*
+
+   URL url = new URL(strings[0]);
+        urlConnection = (HttpURLConnection) url.openConnection();
+        urlConnection.setRequestMethod("PUT");
+        urlConnection.setRequestProperty("Content-Type", "application/json");
+
+private JSONObject mPutUpdate = newJSONObject();
+ mPutUpdate.put("name", mName.getText().toString());
+*/
+
 /*
 
         urlConnection.setDoOutput(true);
