@@ -38,6 +38,8 @@ public void getBytesFromFile(InputStream input, OutputStream output) throws IOEx
     }
 }
 
+<meta-data android:name="android.max_aspect" android:value="2.1" />
+
 public String SubtractHour(String ora){
         SimpleDateFormat mFormatOraFromRecycler = new SimpleDateFormat("HH.mm");
         Date dateRecy = null;
