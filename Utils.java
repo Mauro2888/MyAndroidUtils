@@ -3,6 +3,13 @@ public boolean permResutl(Context context, String[] arrayPerm){
     return req == PackageManager.PERMISSION_GRANTED;
 }
 
+<screen
+    android:screenDensity="420"
+    android:screenSize="normal" />
+
+<screen
+    android:screenDensity="560"
+    android:screenSize="normal" />
 
 //POST
 
