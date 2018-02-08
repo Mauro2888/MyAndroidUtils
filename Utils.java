@@ -3,6 +3,34 @@ public boolean permResutl(Context context, String[] arrayPerm){
     return req == PackageManager.PERMISSION_GRANTED;
 }
 
+//Support screen
+
+<!-- just handsets allowed-->
+<compatible-screens>
+    <!-- all small size screens -->
+    <screen android:screenSize="small" android:screenDensity="ldpi" /> <!-- 120 -->
+    <screen android:screenSize="small" android:screenDensity="mdpi" /> <!-- 160 -->
+    <screen android:screenSize="small" android:screenDensity="hdpi" /> <!-- 240 -->
+    <screen android:screenSize="small" android:screenDensity="280" /> <!-- Workaround -->
+    <screen android:screenSize="small" android:screenDensity="xhdpi" /> <!-- 320 -->
+    <screen android:screenSize="small" android:screenDensity="360" /> <!-- Workaround -->
+    <screen android:screenSize="small" android:screenDensity="420" /> <!-- Workaround Google Pixel, Nexus 5x -->
+    <screen android:screenSize="small" android:screenDensity="xxhdpi" /> <!-- 480 -->
+    <screen android:screenSize="small" android:screenDensity="560" /> <!-- Workaround Google Pixel XL, Nexus 6, Nexus 6P -->
+    <screen android:screenSize="small" android:screenDensity="xxxhdpi" />  <!-- 640 -->
+    <!-- all normal size screens -->
+    <screen android:screenSize="normal" android:screenDensity="ldpi" /> <!-- 120 -->
+    <screen android:screenSize="normal" android:screenDensity="mdpi" /> <!-- 160 -->
+    <screen android:screenSize="normal" android:screenDensity="hdpi" /> <!-- 240 -->
+    <screen android:screenSize="normal" android:screenDensity="280" /> <!-- Workaround -->
+    <screen android:screenSize="normal" android:screenDensity="xhdpi" />  <!-- 320 -->
+    <screen android:screenSize="normal" android:screenDensity="360" /> <!-- Workaround -->
+    <screen android:screenSize="normal" android:screenDensity="420" /> <!-- Workaround Google Pixel, Nexus 5x -->
+    <screen android:screenSize="normal" android:screenDensity="xxhdpi" /> <!-- 480 -->
+    <screen android:screenSize="normal" android:screenDensity="560" /> <!-- Workaround Google Pixel XL, Nexus 6, Nexus 6P -->
+    <screen android:screenSize="normal" android:screenDensity="xxxhdpi" /> <!-- 640 -->
+</compatible-screens>
+
 <screen
     android:screenDensity="420"
     android:screenSize="normal" />
