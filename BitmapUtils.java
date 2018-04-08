@@ -44,7 +44,7 @@ class BitmapUtils {
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths" />
+                android:resource="@xml/file_paths"></meta-data>
         </provider>
 */
     private static final String FILE_PROVIDER_AUTHORITY = "com.example.android.fileprovider";
