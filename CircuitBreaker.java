@@ -1,8 +1,28 @@
-/*
-    	 * After two failures circuit breaker goes into Open State; after five
-    	 * seconds will try again. In Open State messages go to DLQ.*/
-    	from("direct:saas").
-    	log("Sending SAAS HTTP Request").
-    	setHeader(Exchange.HTTP_METHOD, constant(org.apache.camel.component.http4.HttpMethods.GET)).
-		  loadBalance().circuitBreaker(2, 5000L, CircuitBreakerOpenException.class).	
-    	to("http4://localhost:8080/event");
+//Processor
+
+public class MyExceptionClass implements Processor{
+    Logger Logger = LoggerFactory.getLogger(MyExceptionClass.class);
+    @Override
+    public void process(Exchange exchange) throws Exception {   
+        throw new MyException("Other Exceptions");
+    }
+}
+
+//Custom Exception
+public class MyException extends Exception{
+
+    public MyException() {
+    super();
+    }
+
+    public MyException(String message){
+        super("My Exception : "+ message);
+    }
+}
+
+// Dopo 2 tentativi entra in Open State, dopo 5 secondi riprova
+
+from("direct:start")
+	.loadBalance()
+	.circuitBreaker(2, 5000L, MyException.class).	
+to("endpoint");
