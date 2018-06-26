@@ -1,1 +1,1 @@
-# MyAndroidUtils
+# Snippets
