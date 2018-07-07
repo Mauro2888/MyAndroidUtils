@@ -2,7 +2,7 @@ public boolean permResutl(Context context, String[] arrayPerm){
     int req = ContextCompat.checkSelfPermission(context,arrayPerm[0]);
     return req == PackageManager.PERMISSION_GRANTED;
 }
-
+C:\Users\Admin\AppData\Local\Google\Chrome\User Data\Default\Bookmarks
 //Support screen
 
 <!-- just handsets allowed-->
