@@ -1,10 +1,10 @@
  
  
- //copy to new zip content of zip flow
+ //copy  zip flow to new zip content, only xml end file 
  public static void copyZipContent() throws IOException {
 
         ZipFile zipFile = new ZipFile("C:\\testZip\\doc.zip");
-        final ZipOutputStream zos = new ZipOutputStream(new FileOutputStream("C:\\testZip\\diceUp.zip"));
+        final ZipOutputStream zos = new ZipOutputStream(new FileOutputStream("C:\\testZip\\fileCopiato.zip"));
         for (Enumeration<? extends ZipEntry> e = zipFile.entries(); e.hasMoreElements(); ) {
             ZipEntry entryIn = e.nextElement();
             if (entryIn.getName().contains(".xml")) {
