@@ -62,8 +62,8 @@ public static void readAndCopy(InputStream inputStream) throws IOException {
 
     public static void writeToZipFile(String xmlNameFile, ZipOutputStream zipOutputStream)
            throws IOException {
-
-        File inputXmlFile = new File(xmlNameFile);
+//path for file must to be appended to file name 
+        File inputXmlFile = new File("C:\\testZip\\" + xmlNameFile);
         FileInputStream inputStream = new FileInputStream(inputXmlFile);
         ZipEntry zipEntry = new ZipEntry(xmlNameFile);
         zipOutputStream.putNextEntry(zipEntry);
