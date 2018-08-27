@@ -4,7 +4,8 @@
   public static void jmsToZip(InputStream inputStream) throws IOException {
         File flowZipped = new File("C:\\zip\\mauro\\out.zip");
         FileUtils.copyToFile(inputStream,flowZipped);
-        connectToSftp(flowZipped.getCanonicalFile());
+        checkUserName("Mauro");
+        connectToSftp(flowZipped,"I3021");
         modelDto.setTmpFile("Mauro");
     }
  
