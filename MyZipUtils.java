@@ -1,7 +1,7 @@
  
 //with commons 
   ModelDto modelDto = new ModelDto();
-  public static void jmsToZip(InputStream inputStream) throws IOException {
+  public static void zippedFlowToSftp(InputStream inputStream) throws IOException {
         File flowZipped = new File("C:\\zip\\mauro\\out.zip");
         FileUtils.copyToFile(inputStream,flowZipped);
         checkUserName("Mauro");
