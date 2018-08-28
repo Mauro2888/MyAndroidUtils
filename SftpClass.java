@@ -15,10 +15,10 @@ import com.jcraft.jsch.Session;
 public class I301Sftp {
 	
 
-	public final static String USERS_LISTS = String.valueOf(System.getProperty("goep.hm.i301.dmz.users.list"));
-	public final static String DMZ_HOST = String.valueOf(System.getProperty("goep.hm.i301.dmz.host"));
-	public final static String DMZ_FOLDER_PATH = String.valueOf(System.getProperty("goep.hm.i301.outbound.ftpdirectory"));
-	public final static String DMZ_PASSWORD = "qVpcyu$o";
+	public final static String USERS_LISTS = String.valueOf(System.getProperty("Props"));
+	public final static String DMZ_HOST = String.valueOf(System.getProperty("Props"));
+	public final static String DMZ_FOLDER_PATH = String.valueOf(System.getProperty("Props"));
+	public final static String DMZ_PASSWORD = "Props";
 	
 	static SftpDto sftpDtoInstance = new SftpDto();
 	
