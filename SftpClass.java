@@ -1,4 +1,3 @@
-package com.hm.goep.switchyard.i301central;
 
 import java.io.File;
 import java.io.FileInputStream;
