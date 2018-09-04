@@ -1,4 +1,4 @@
- private Processor checkBlankFile = new Processor() {
+ private Processor blankFile = new Processor() {
 
               @Override
               public void process(Exchange exchange) throws Exception {
@@ -8,7 +8,7 @@
                      InputSource src = new InputSource();
                      src.setCharacterStream(new StringReader(strMessage));	
                      Document doc = builder.parse(src);	
-                     String XPATH_EXPRESSION = "//*[local-name()='businessTransaction']/path/path";
+                     String XPATH_EXPRESSION = "//*[local-name()='TAG']/path/path";
                      XPath xPath = XPathFactory.newInstance().newXPath();
                      if(!strMessage.contains("lineItem"))	
                      {	
