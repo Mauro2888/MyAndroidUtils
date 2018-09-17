@@ -1,14 +1,15 @@
 //if files are overwrited try 
 // to("file:xxx?fileExist=Append"); 
 // example - from(src).split().method(splitbean which returns an custom Iterator).streaming().to(file:...?fileExist=Append); 
-
+public Iterator<Message> splitMessage(Exchange exchange) { 
+ BufferedReader bufferReader = exchange.getIn().getBody(BufferedReader.class); 
  List<Message> messages = new ArrayList<Message>(); 
         String line = null; 
         int count = 0; 
         int fileNameCount = 0; 
         StringBuffer sb = new StringBuffer(); 
         try { 
-            while (null != (line = inputReader.readLine())) { 
+            while (null != (line = bufferReader.readLine())) { 
                 sb.append(line); 
                 count++; 
 
@@ -20,7 +21,7 @@
                 } 
             } 
 
-            inputReader.close(); 
+            bufferReader.close(); 
         } catch(Exception ex) { 
             ex.printStackTrace(); 
         } 
