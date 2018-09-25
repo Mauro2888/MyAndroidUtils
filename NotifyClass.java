@@ -47,3 +47,21 @@ public class NotifyUtils extends ContextWrapper {
                 .setAutoCancel(true);
     }
 }
+
+
+//ON RECEIVE
+/** public void createNotify(Context context){
+        NotifyUtils notifyUtils = new NotifyUtils(context);
+        Intent notificationIntent = new Intent(context, MainActivity.class);
+        PendingIntent contentIntent = PendingIntent.getActivity(context, 0, notificationIntent , 0);
+        Notification.Builder builder = notifyUtils.getAndroidChannelNotification("Ricordare", "").setContentIntent(contentIntent);
+        notifyUtils.getManager().notify(1023,builder.build());
+    } **/
+
+//SETUP ALARM
+/**public void setupAlarm(){
+        Intent intent = new Intent(getBaseContext(), AlarmReceiver.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(getBaseContext(), 1, intent, 0);
+        AlarmManager alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
+        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
+    } **/
