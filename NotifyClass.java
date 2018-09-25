@@ -8,11 +8,11 @@ import android.content.ContextWrapper;
 import android.graphics.Color;
 
 
-public class Notify extends ContextWrapper {
+public class NotifyUtils extends ContextWrapper {
 
     private NotificationManager mNotificationManager;
 
-    public Notify(Context base) {
+    public NotifyUtils(Context base) {
         super(base);
         createNotification();
     }
@@ -32,7 +32,7 @@ public class Notify extends ContextWrapper {
         }
     }
 
-    private NotificationManager getManager(){
+    public NotificationManager getManager(){
         if (mNotificationManager == null){
             mNotificationManager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
         }
