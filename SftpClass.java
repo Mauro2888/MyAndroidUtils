@@ -11,7 +11,7 @@ import com.jcraft.jsch.ChannelSftp;
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.Session;
 
-public class I301Sftp {
+public class TestSftp {
 	
 
 	public final static String USERS_LISTS = String.valueOf(System.getProperty("Props"));
@@ -21,7 +21,7 @@ public class I301Sftp {
 	
 	static SftpDto sftpDtoInstance = new SftpDto();
 	
-	public I301Sftp(){
+	public TestSftp(){
 		
 	}
 	
