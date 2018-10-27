@@ -8,6 +8,28 @@
         connectToSftp(flowZipped,"I3021");
         modelDto.setTmpFile("Mauro");
     }
+
+public static void writeFileToZip(String path, String fileOutputName){
+        try {
+            File inputFile = new File(path);
+            FileInputStream fileInputStream = new FileInputStream(inputFile);
+            ZipOutputStream fileOutputStream = new ZipOutputStream(new FileOutputStream(fileOutputName));
+            fileOutputStream.putNextEntry(new ZipEntry(inputFile.getName()));
+            byte[] buffer = new byte[1024];
+            int len;
+            while ((len = fileInputStream.read(buffer))>= 0){
+                fileOutputStream.write(buffer,0,len);
+            }
+            fileOutputStream.flush();
+            fileInputStream.close();
+            fileOutputStream.close();
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
  
  //copy  zip flow to new zip content, only xml end file 
  public static void copyZipContent() throws IOException {
