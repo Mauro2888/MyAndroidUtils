@@ -1,6 +1,8 @@
 public class CopyFilesJava {
 
     public static void main(String[] args) throws IOException {
+        
+        //.to(Log:?Level=INFO&showBody=true&showHeaders=true)
 
         File input = new File("data/input");
         File output = new File("data/output");
