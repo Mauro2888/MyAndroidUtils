@@ -1,0 +1,6 @@
+Consumer
+    - Event driven = asynchronous, react when exisit an action (JMS or Kafka) 
+    - Pooling = consuming in set window time (folder or ftp server)  
+    
+ Producer
+ Create, conver and send to Endpoint
