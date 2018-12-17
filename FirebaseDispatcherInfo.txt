@@ -1,8 +1,0 @@
-- declare class for dispatcher that extends com.firebase.jobdispatcher.JobService
-
-<service android:name=".SeviceBg" android:exported="false">
-    <intent-filter>
-        <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE"/>
-    </intent-filter>
-</service>
-
