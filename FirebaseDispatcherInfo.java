@@ -1,4 +1,5 @@
-- declare class for dispatcher that extends com.firebase.jobdispatcher.JobService
+- //declare class for dispatcher that extends 
+    com.firebase.jobdispatcher.JobService
 
 <service android:name=".SeviceBg" android:exported="false">
     <intent-filter>
@@ -10,7 +11,7 @@
  //initialize dispatcher
         FirebaseJobDispatcher jobDispatcher = new FirebaseJobDispatcher(new GooglePlayDriver(this));
         
-Scheduling a simple job
+//Scheduling a simple job
 Job myJob = dispatcher.newJobBuilder()
     .setService(MyJobService.class) // the JobService that will be called
     .setTag("my-unique-tag")        // uniquely identifies the job
