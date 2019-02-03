@@ -36,10 +36,10 @@ public class CamelRouteTestMock {
     @Test
     public void testMoveFileMock() throws InterruptedException {
         String file = "xmlfile";
-
+        
         mockEndpoint.expectedMessageCount(1);
         mockEndpoint.expectedBodiesReceived(file);
-        producerTemplate.sendBody("file:C:/test/input",file);
+        producerTemplate.sendBody(environmentCall.getProperty("fromRoute"),file);
 
         mockEndpoint.assertIsSatisfied();
     }
